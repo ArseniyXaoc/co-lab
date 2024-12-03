@@ -8,6 +8,9 @@ import {
   ListChecks,
   Wallet,
   LucideProps,
+  MessageCircle,
+  NotebookPen,
+  Users,
 } from 'lucide-react';
 
 export type MenuItem = {
@@ -54,6 +57,20 @@ const menuItems: MenuItems = {
     {
       icon: Wallet,
       title: 'Budget',
+    },
+  ],
+  collaborate: [
+    {
+      icon: MessageCircle,
+      title: 'Chat',
+    },
+    {
+      icon: NotebookPen,
+      title: 'Shared Notes',
+    },
+    {
+      icon: Users,
+      title: 'Participants',
     },
   ],
 };

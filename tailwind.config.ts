@@ -10,64 +10,32 @@ export default {
   theme: {
     extend: {
       gridTemplateRows: {
-        layout: '1fr 2fr',
+        layout: 'auto 1fr',
       },
       gridTemplateColumns: {
-        layout: '16rem 2fr',
+        layout: '16rem 1fr',
       },
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         text: {
           DEFAULT: '#f1f1f1',
-          textPale: '#d4d4d8',
-          textPrimary: '#176C8D',
-          textDark: '#1C223B',
-        },
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
-        },
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))',
-        },
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
-        },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
-        },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
-        },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
-        },
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        chart: {
-          '1': 'hsl(var(--chart-1))',
-          '2': 'hsl(var(--chart-2))',
-          '3': 'hsl(var(--chart-3))',
-          '4': 'hsl(var(--chart-4))',
-          '5': 'hsl(var(--chart-5))',
+          pale: '#d4d4d8',
+          primary: '#176C8D',
+          secondary: '#9ca3af',
         },
         sidebar: {
           DEFAULT: '#FFFFFF',
           primary: '#1B223C',
-          icon: '#fafafa',
+          icon: '#3BAEAA',
           item: '#9ca3af',
           hover: '#FFFFFF',
+        },
+        header: {
+          DEFAULT: '#243554',
+        },
+        button: {
+          primary: '#3BAEAA',
         },
       },
       borderRadius: {

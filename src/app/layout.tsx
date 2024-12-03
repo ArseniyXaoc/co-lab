@@ -3,7 +3,7 @@ import localFont from 'next/font/local';
 import Header from '@/components/Header';
 import { ClerkProvider } from '@clerk/nextjs';
 import { AppSidebar } from '@/components/AppSidebar';
-import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
+import { SidebarProvider } from '@/components/ui/sidebar';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -17,28 +17,33 @@ const geistMono = localFont({
   weight: '100 900',
 });
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <ClerkProvider>
       <html lang="en">
-        <body
-          className={`grid h-screen grid-rows-layout grid-cols-layout ${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-          <header className="col-start-2 col-span-1">
+        <body className="grid grid-rows-layout grid-cols-layout">
+          {/* Header */}
+          <header className="col-start-2 row-start-1">
             <Header />
           </header>
-          <aside className="row-start-1 row-span-2">
+
+          {/* Sidebar */}
+          <aside className="col-start-1 row-start-1 row-span-2">
             <SidebarProvider>
               <AppSidebar />
             </SidebarProvider>
           </aside>
-          <main className="row-start-2 col-start-2">{children}</main>
+
+          {/* Main content */}
+          <main className="col-start-2 row-start-2">{children}</main>
         </body>
       </html>
     </ClerkProvider>
   );
-}
+};
+
+export default RootLayout;

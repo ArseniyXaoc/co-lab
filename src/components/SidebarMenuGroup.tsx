@@ -21,7 +21,7 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, items }) => 
           <SidebarMenuButton asChild key={item.title} className="hover:bg-sidebar-hover">
             <a href="#" className="flex items-center gap-2 p-2 group/menu">
               <item.icon size={16} className="text-white group-hover/menu:text-sidebar-primary" />
-              <span className="text-sidebar-item group-hover/menu:text-sidebar-primary">
+              <span className="text-text-secondary group-hover/menu:text-sidebar-primary">
                 {item.title}
               </span>
             </a>

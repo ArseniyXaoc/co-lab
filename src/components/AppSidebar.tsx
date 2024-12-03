@@ -15,13 +15,14 @@ export function AppSidebar() {
     <Sidebar collapsible="none" className="border-none">
       {/* Header */}
       <SidebarHeader className="bg-sidebar-primary">
-        <Image src="/logo.png" width={60} height={60} alt="logo" />
+        <Image src="/logo.png" width="60" height="60" alt="logo" className="w-16 h-auto" />
       </SidebarHeader>
 
       {/* Content */}
       <SidebarContent className="rounded-br-lg bg-sidebar-primary">
         <SidebarMenuGroup title="Explore" items={menuItems.explore} />
         <SidebarMenuGroup title="Plan" items={menuItems.plan} />
+        <SidebarMenuGroup title="Plan" items={menuItems.collaborate} />
       </SidebarContent>
 
       {/* Footer */}
