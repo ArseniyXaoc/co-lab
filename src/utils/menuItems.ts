@@ -16,6 +16,7 @@ import {
 export type MenuItem = {
   icon: React.ComponentType<LucideProps>;
   title: string;
+  href?: string; // Add href as an optional property
 };
 
 type MenuItems = {
@@ -27,6 +28,7 @@ const menuItems: MenuItems = {
     {
       icon: Map,
       title: 'Map',
+      href: '/map', // Add the href for the Map page
     },
     {
       icon: MapPinHouse,
